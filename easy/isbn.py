@@ -8,7 +8,7 @@ for i in range(n):
     operator = 10
     isbn_len = len(isbn)
        
-    #case 10
+    # case 10
     if isbn_len == 10 and isbn[:isbn_len-1].isdigit(): 
         for d in range(9):
             isbn_sum += int(isbn[d]) * operator
@@ -21,10 +21,10 @@ for i in range(n):
         elif check_digit == "11":
             check_digit = "0"
 
-        if (check_digit != isbn[-1]):
+        if check_digit != isbn[-1]:
             invalid.append(isbn)
 
-    #case 13
+    # case 13
     elif isbn_len == 13 and isbn[:isbn_len-1].isdigit():
         for d in range(12):
             if d % 2 == 0:

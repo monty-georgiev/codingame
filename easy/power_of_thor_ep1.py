@@ -1,13 +1,11 @@
 #! /usr/bin/python3
 
-
 light_x, light_y, current_x, current_y = [int(i) for i in input().split()]
 
 while True:
     remaining_turns = int(input())
 
-
-    #EAST
+    # EAST
     if light_y > current_x:
         if light_y > current_y:
             print("SE")
@@ -16,7 +14,7 @@ while True:
 
         current_x += 1
 
-    #WEST
+    # WEST
     if light_x < current_x:
         if light_y > current_y:
             print("SW")
@@ -27,7 +25,7 @@ while True:
         
         current_x -= 1
 
-    #NORTH
+    # NORTH
     if light_y < current_y:
         if light_x > current_x:
             print("NE")
@@ -36,7 +34,7 @@ while True:
 
         current_y -= 1
 
-    #SOUTH
+    # SOUTH
     if light_y > current_y:
         if light_x == current_x:
             print("S")
